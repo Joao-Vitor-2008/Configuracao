@@ -7,6 +7,12 @@ vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank selection to system clipb
 vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from system clipboard" })
 vim.keymap.set("v", "<leader>p", '"+p', { desc = "Paste from system clipboard" })
 
-vim.keymap.set("n", "<leader>r", function()
-  vim.lsp.buf.rename()
-end, { desc = "LSP Rename" })
+local map = vim.keymap.set
+local dap = require("dap")
+map("n", "<F9>", dap.continue)
+map("n", "<F8>", dap.step_over)
+map("n", "<F11>", dap.step_into)
+map("n", "<F10>", dap.toggle_breakpoint)
+vim.keymap.set("n", "<leader>db", function()
+  require("dapui").open()()
+end)
