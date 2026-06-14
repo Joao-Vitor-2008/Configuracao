@@ -1,0 +1,21 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p3
+UUID=46b74d87-61b1-4954-bea8-0e40e06612ad	/         	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@	0 0
+
+# /dev/nvme0n1p3
+UUID=46b74d87-61b1-4954-bea8-0e40e06612ad	/home     	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@home	0 0
+
+# /dev/nvme0n1p3
+UUID=46b74d87-61b1-4954-bea8-0e40e06612ad	/var      	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@var	0 0
+
+# /dev/nvme0n1p3
+UUID=46b74d87-61b1-4954-bea8-0e40e06612ad	/.snapshots	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@snapshots	0 0
+
+# /dev/nvme0n1p1
+UUID=FA6B-A61B      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/nvme0n1p2
+UUID=308f6fd6-889f-4f02-8655-0dc10d93f79f	none      	swap      	defaults  	0 0
